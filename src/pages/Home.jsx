@@ -9,37 +9,56 @@ import { database } from "../../firebase";
 
 const Home = () => {
   const [onlineCount, setOnlineCount] = useState(0);
+  const [totalVisitors, setTotalVisitors] = useState(0);
 
   useEffect(() => {
-    const userId = uuidv4(); // إنشاء معرف فريد للمستخدم
-    const userRef = ref(database, `onlineUsers/${userId}`); // تحديد المسار في قاعدة البيانات
+    let userId = sessionStorage.getItem("visitorId");
 
-    // إضافة المستخدم إلى قاعدة البيانات
-    set(userRef, true)
-      .then(() => {
-        console.log(`User ${userId} added to online users`); // تأكيد إضافة المستخدم
-      })
-      .catch((error) => {
-        console.error("Error adding user:", error); // في حالة حدوث خطأ
+    const userRef = ref(database, `onlineUsers/${userId || uuidv4()}`);
+    const totalVisitorsRef = ref(database, "totalVisitors");
+
+    // إذا لم يوجد userId => زائر جديد
+    if (!userId) {
+      userId = uuidv4();
+      sessionStorage.setItem("visitorId", userId);
+
+      // أضفه إلى قائمة الزوار الحاليين
+      set(ref(database, `onlineUsers/${userId}`), true);
+      onDisconnect(ref(database, `onlineUsers/${userId}`)).remove();
+
+      // زيادة إجمالي الزوار
+      import("firebase/database").then(({ runTransaction }) => {
+        runTransaction(totalVisitorsRef, (currentValue) => {
+          console.log("✅ Visitor incremented. Previous:", currentValue);
+          return (currentValue || 0) + 1;
+        });
       });
+    } else {
+      // زائر قديم - فقط أضفه إلى قائمة الحاليين
+      set(userRef, true);
+      onDisconnect(userRef).remove();
+    }
 
-    // إزالة المستخدم عند الخروج من الصفحة
-    onDisconnect(userRef).remove();
+    // متابعة عدد الزوار الحاليين
+    const unsubscribeOnline = onValue(
+      ref(database, "onlineUsers"),
+      (snapshot) => {
+        const users = snapshot.val();
+        setOnlineCount(users ? Object.keys(users).length : 0);
+      }
+    );
 
-    // مراقبة عدد المستخدمين في الوقت الفعلي
-    const allUsersRef = ref(database, "onlineUsers");
-    onValue(allUsersRef, (snapshot) => {
-      const users = snapshot.val(); // الحصول على البيانات
-      const count = users ? Object.keys(users).length : 0; // حساب عدد المستخدمين
-      setOnlineCount(count); // تحديث حالة عدد المستخدمين
+    // متابعة إجمالي الزوار
+    const unsubscribeTotal = onValue(totalVisitorsRef, (snapshot) => {
+      setTotalVisitors(snapshot.val() || 0);
     });
 
-    // تنظيف العملية عند الخروج من المكون
     return () => {
-      // هنا يتم التعامل مع حذف المستخدم عند مغادرة الصفحة
-      set(userRef, null); // يمكن استخدام null بدلاً من إزالة كامل البيانات
+      unsubscribeOnline();
+      unsubscribeTotal();
     };
-  }, [database]); // التأكد من أن الـ `database` لا يتغير
+  }, []);
+
   return (
     <>
       <div className="relative z-0">
@@ -54,10 +73,17 @@ const Home = () => {
 
         {/* النص و الأزرار */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-          <div className="text-white font-semibold bg-orange-500 px-4 py-2 rounded-full shadow-lg mb-14">
-            <span>عدد الزوار الحاليين:</span>
-            <span className="ml-2">{onlineCount}</span>
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="text-white font-semibold bg-orange-500 px-4 py-2 rounded-full shadow-lg">
+              <span>الزوار الحاليين:</span>
+              <span className="ml-2">{onlineCount}</span>
+            </div>
+            <div className="text-white font-semibold bg-green-600 px-4 py-2 rounded-full shadow-lg">
+              <span>إجمالي الزوار:</span>
+              <span className="ml-2">{totalVisitors}</span>
+            </div>
           </div>
+
           <h1 className="sm:text-5xl text-3xl font-bold mb-4">
             مرحبا بكم في اعرف قسمك كلية اداب عين شمس
           </h1>
@@ -66,9 +92,8 @@ const Home = () => {
             الطلاب في اختيار القسم المناسب لهم داخل كلية الآداب بجامعة عين شمس
           </p>
 
-          {/* الأزرار مع الألوان المطلوبة */}
+          {/* الأزرار */}
           <div className="flex flex-wrap justify-center gap-6">
-            {/* زر برتقالي غامق */}
             <Link
               to="/sections"
               className="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-700 transition cursor-pointer duration-300"
@@ -76,7 +101,6 @@ const Home = () => {
               شوف الاقسام من هنا
             </Link>
 
-            {/* زر شفاف بحدود برتقالية */}
             <Link
               to="/contact"
               className="bg-transparent border-2 border-orange-700 px-8 py-3 rounded-full hover:bg-orange-700 text-white transition cursor-pointer flex gap-2 items-center duration-300"
@@ -89,6 +113,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <AboutUs />
       <SomeSections />
     </>

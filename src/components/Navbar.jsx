@@ -110,6 +110,15 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/conditions"
+              className="hover:text-orange-600 transition duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              شروط القبول
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className="hover:text-orange-600 transition duration-300"
               onClick={() => setIsOpen(false)}

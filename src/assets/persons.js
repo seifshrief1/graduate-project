@@ -1,4 +1,5 @@
 import student from "../assets/851b0d6d-7524-4860-83c0-8195a1f54513.jpg"
+import female from "../assets/19ccbcc8-8d35-41ed-84e8-c318637530ee.jpg"
 import maher from "../assets/صورة واحد.jpg"
 import ahmed from "../assets/احمد محمود.jpg"
 
@@ -9,7 +10,7 @@ export const persons = [
     email: "mazenayman143@gmail.com",
     location: "السلام",
     specialty: "طالب بالفرقة الثانيه قسم التاريخ",
-    image: student
+    image: student,
   },
   {
     name: "سلسبيل السيد",
@@ -17,7 +18,8 @@ export const persons = [
     email: "salsabeelelsayed350@gmail.com",
     location: "القاهره",
     specialty: "طالبه بالفرقة الثالثة قسم فلسفة",
-    image: student
+    image: female,
+
   },
   {
     name: "شروق سيد",
@@ -25,7 +27,8 @@ export const persons = [
     email: "ShorookSaid8@gmail.com",
     location: "عين شمس",
     specialty: "مستوى سادس فرقة ثالثة قسم جغرافيا شعبة نظم معلومات جغرافية",
-    image: student
+    image: female,
+
   },
   {
     name: "احمد عبد الحليم",
@@ -33,7 +36,7 @@ export const persons = [
     email: "ahmedhassaan412@gmail.com",
     location: "القاهره",
     specialty: "شعبة عامة فرقة رابعه قسم جغرافيا ونظم المعلومات الجغرافية",
-    image: student
+    image: student,
   },
   {
     name: "محمد عبد العال",
@@ -41,7 +44,7 @@ export const persons = [
     email: "لا يوجد",
     location: "لا يوجد",
     specialty: "فرقة رابعة فلسفة",
-    image: student
+    image: student,
   },
   {
     name: "مايكل ثروت",
@@ -49,7 +52,7 @@ export const persons = [
     email: "Michaeltharwat56@gmail.com",
     location: "لا يوجد",
     specialty: "فرقة رابعة فلسفة",
-    image: student
+    image: student,
   },
   {
     name: "زينب صبحي",
@@ -57,7 +60,8 @@ export const persons = [
     email: "zainbsobhi61@gmail.com",
     location: "حدايق الزيتون",
     specialty: "مستوى سادس فرقة تالتة جغرافية شعبة عامة",
-    image: student
+    image: female,
+
   },
   {
     name: "احمد محمد",
@@ -65,7 +69,7 @@ export const persons = [
     email: "https://www.facebook.com/profile.php?id=100032965693283",
     location: "القاهره",
     specialty: "الفرقة الرابعه قسم جغرافيا",
-    image: student
+    image: student,
   },
   {
     name: "احمد محمد",
@@ -73,7 +77,7 @@ export const persons = [
     email: "https://www.facebook.com/profile.php?id=100032965693283",
     location: "القاهره",
     specialty: "الفرقة الرابعه قسم جغرافيا",
-    image: student
+    image: student,
   },
   {
     name: "ريم ياسين",
@@ -81,7 +85,7 @@ export const persons = [
     email: "reemy2925@gmail.com",
     location: "لا يوجد",
     specialty: "طالبة بالفرقة الرابعه قسم الدراما والنقد المسرحى",
-    image: student
+    image: female,
   },
   {
     name: "تبارك محمد",
@@ -89,7 +93,7 @@ export const persons = [
     email: "tabarakmohamed682@gmail.com",
     location: "لا يوجد",
     specialty: "طالبه بالفرقه الثالثه قسم إرشاد سياحى إنجليزى",
-    image: student
+    image: female,
   },
   {
     name: "ايمان توفيق",
@@ -97,7 +101,7 @@ export const persons = [
     email: "eman0tawfickk@gmail.com",
     location: "لا يوجد",
     specialty: "مستوى ثامن قسم دراما ونقد مسرحي",
-    image: student
+    image: female,
   },
   {
     name: "ياسمين عبد الناصر",
@@ -105,7 +109,7 @@ export const persons = [
     email: "yassminenasserr",
     location: "لا يوجد",
     specialty: "مستوي تاني قسم دراما ونقد مسرحي",
-    image: student
+    image: female,
   },
   {
     name: "مؤمن ماهر",
@@ -114,6 +118,7 @@ export const persons = [
     location: "لا يوجد",
     specialty: "طالب بالفرقه الرابعه قسم دراسات المعلومات",
     image: maher
+    ,
   },
   {
     name: "امينة محمد",
@@ -121,7 +126,7 @@ export const persons = [
     email: "https://www.instagram.com/omniamohamed38?igsh=dTliOWRkcWczazB4",
     location: "لا يوجد",
     specialty: "طالبه بالفرقة الثالثة قسم إرشاد سياحى",
-    image: student
+    image: female,
   },
   {
     name: "احمد محمود",
@@ -130,6 +135,7 @@ export const persons = [
     location: "المنوفية",
     specialty: "طالب بالفرقة الرابعة قسم دراسات المعلومات ",
     image: ahmed
+    ,
   },
   {
     name: "مريم محمد",
@@ -137,6 +143,30 @@ export const persons = [
     email: "yore7785@gmail.com",
     location: "القاهرة",
     specialty: "طالبة بالفرقة الثانية قسم تاريخ",
-    image: student
+    image: female,
+  },
+  {
+    name: "عبدالله السيد",
+    phone: "01551114922",
+    email: "https://www.facebook.com/share/1A84dZ1C1P/",
+    location: "القاهرة",
+    specialty: "طالب بالفرقة الأولى قسم حضارة اوروبية",
+    image: student,
+  },
+  {
+    name: "زينب عبد الحميد",
+    phone: "01101739850",
+    email: "zeinabbahmedd3@gmail.com",
+    location: "حدايق القبة",
+    specialty: "طالبة بالفرقة الرابعة قسم اللغة العبرية",
+    image: female,
+  },
+  {
+    name: "رقية محمد",
+    phone: "01005779207",
+    email: "https://www.instagram.com/_roqaya.mo7md_?utm_source=qr&igsh=c212cnNsaW9yZ3Vn",
+    location: "القليوبية",
+    specialty: "طالبة بالفرقة الاولى قسم اللغات الشرقية",
+    image: female,
   },
 ]

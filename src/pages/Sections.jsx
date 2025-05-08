@@ -18,7 +18,7 @@ const Sections = () => {
   return (
     <div className="mt-20">
       <a
-        href="https://drive.google.com/file/d/1FedLp4amPD6PPu4xbeXaKbGALiF4Y3AD/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1iMs6iPybSn6hbJh5n6OgldNL_vfy_hSA/view?usp=drive_link"
         className="bg-orange-500 text-white p-2 border-2 rounded block text-center w-1/4 mx-auto hover:bg-transparent hover:text-orange-500 hover:border-2 hover:border-orange-500 transition duration-300 mb-5"
         target="_blank"
         rel="noopener noreferrer"

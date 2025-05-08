@@ -8,7 +8,7 @@ import img7 from "../assets/3d744cee-732a-44b1-81cf-3d848a1cec43.png"
 import img8 from "../assets/5020cbd6-160b-4df2-826f-2f21392a7415.jpg"
 import img9 from "../assets/7617f993-20ed-4133-845b-c7535a0b56ab.jpg"
 import img10 from "../assets/2a999ed2-d308-41d4-a263-0db6a3a98140.jpg"
-import img11 from "../assets/5892f49f-9443-435c-84f2-8ab9a8965a4b.jpg"
+import img11 from "../assets/5892f49f-9443-435c-84f2-8ab9a8965a4b.png"
 import img12 from "../assets/0a09dfe2-6fc7-41d3-ae76-f155b9ed4977.jpg"
 import img13 from "../assets/d18eca16-3f6e-4c25-b2d9-2907b2c0c488.jpg"
 import img14 from "../assets/0291f0bf-5c44-4388-87d5-4eb7c1cecdfa.jpg"
@@ -17,7 +17,7 @@ import img14 from "../assets/0291f0bf-5c44-4388-87d5-4eb7c1cecdfa.jpg"
 export const sections = [
   {
     id: 1,
-    name: "قسم دراسة المعلومات",
+    name: "قسم دراسات المعلومات",
     description: `
 انضم إلى كلية الآداب بجامعة عين شمس وكان يعرف باسم المكتبات والمعلومات سابقًا، وهو أحد الأقسام الرائدة. يُعد هذا القسم من الأقسام غير التقليدية التي تواكب التطورات التكنولوجية، ويهدف إلى إعداد جيل متميّز من المتخصصين في إدارة وتنظيم المعلومات والمعرفة، سواء في شكلها الورقي أو الرقمي.
 
@@ -197,7 +197,7 @@ export const sections = [
   },
   {
     id: 3,
-    name: "قسم اللغة الشرقية",
+    name: "قسم اللغات الشرقية",
     description: `
     قسم اللغات الشرقية – كلية الآداب، جامعة عين شمس
 
@@ -314,8 +314,13 @@ export const sections = [
 شركات السياحة والتواصل الثقافي.
     `,
     image: img14,
-    bookLink: "",
-    bookName: "كتب قسم اللغات الشرقية"
+    facebook: "https://www.facebook.com/groups/2428513720763387/?ref=share&mibextid=NSMWBT",
+    whatsAppStudents: [
+      "https://chat.whatsapp.com/GNjuoaUDyVVLQMe6tT8bVj",
+      "https://chat.whatsapp.com/HskSGcRXRj8CID57H0hH5p",
+      "https://chat.whatsapp.com/KGdqf06uy5X7dlPcuaqNcg",
+      "https://chat.whatsapp.com/GNjuoaUDyVVLQMe6tT8bVj"
+    ],
   },
   {
     id: 4,
@@ -432,8 +437,10 @@ export const sections = [
 قراءة وتحقيق الوثائق.
     `,
     image: img3,
-    bookLink: "https://drive.google.com/drive/folders/1NsUq1Z4MzzZg5G_5M59MCJyoz0DgplTg",
-    bookName: "كتب قسم التاريخ"
+    facebook: "https://www.facebook.com/groups/141442469226611/?ref=share&mibextid=NSMWBT",
+    whatsAppStudents: [
+      "https://chat.whatsapp.com/FA29fGbRkeWK352YC6S4kO"
+    ],
   },
   {
     id: 5,
@@ -678,8 +685,16 @@ export const sections = [
 تقديم الدعم النفسي في المؤسسات الحكومية ومراكز رعاية ذوي الاحتياجات الخاصة.
     `,
     image: img5,
-    bookLink: "",
-    bookName: "كتب قسم علم النفس"
+    facebook: "https://www.facebook.com/groups/45370398644/?ref=share&mibextid=NSMWBT",
+    whatsAppStudents: [
+      " https://chat.whatsapp.com/EWi56MeARsYLtKAY5IGLBk",
+      "https://chat.whatsapp.com/J9U9cYRQ9aDK3uix8q8hxB",
+    ],
+    telegramStudents: [
+      "https://t.me/+K4B8M3dDOHo3YzA8",
+      "https://t.me/+WlkIQIw7I4Q4OWNk",
+      "https://t.me/+8Uc44Oqnm9FlMTY0"
+    ]
   },
   {
     id: 7,
@@ -822,8 +837,19 @@ export const sections = [
 مستشار سياسات اجتماعية في الوزارات والمجالس المتخصصة.
     `,
     image: img7,
-    bookLink: "",
-    bookName: "كتب قسم علم الاجتماع"
+    facebook: "https://www.facebook.com/share/1FeRr3ULTc/",
+    facebookStudents: [
+      " https://www.facebook.com/groups/sociology.deparment/?ref=share&mibextid=NSMWBT"
+    ],
+    whatsAppStudents: [
+      "https://chat.whatsapp.com/DtnqirpvZhJ1nQlJv8IBSE",
+      "https://chat.whatsapp.com/H5pcokN26uzKtbuZZnx20Q",
+      "https://chat.whatsapp.com/HneKAlsg6jj5IAcpokFcZE",
+      "https://chat.whatsapp.com/CbybP15xBqaEzwrRb2ZVVL"
+    ],
+    telegramStudents: [
+      "https://t.me/c/1530485983/14660",
+    ]
   },
   {
     id: 8,
@@ -1299,8 +1325,12 @@ export const sections = [
 كثير من الناس لا يعرفون أهمية دراسة الحضارات القديمة أو اللغات الكلاسيكية، مما يقلل من تقدير المجتمع لهذا التخصص
     `,
     image: img11,
-    bookLink: "",
-    bookName: "كتب قسم الحضارة الاور"
+    facebook: "https://m.me/ch/AbYYy7TrCxTOVRFu/?send_source=cm%3Acopy_invite_link",
+    whatsAppStudents: [
+      "https://chat.whatsapp.com/KxYvdGIrq0S0z938nrgDQn",
+      "https://chat.whatsapp.com/HnKZ5KvPl4BBBilZBrCK9a",
+      "https://chat.whatsapp.com/JGUWQYd1fp8JFLZnWi3aNS",
+    ],
   },
   {
     id: 12,
@@ -1535,7 +1565,14 @@ export const sections = [
 مؤسسات الترجمة والنشر، خاصة في مجال تحليل الوثائق.
     `,
     image: img12,
-    bookLink: "",
-    bookName: "كتب قسم اللغة العبرية"
+    facebook: "https://www.facebook.com/share/1Ab3wuY8bH/",
+    whatsAppStudents: [
+      "https://chat.whatsapp.com/HMfLCDm0agLFn2ol55UJ9Z",
+      "https://chat.whatsapp.com/J9n2qRPR1ivEadaJ6dC7KS",
+    ],
+    telegramStudents: [
+      "https://t.me/+wC1HStgI6do3Yjlk",
+      "https://t.me/+O2l-WiiHpoI2ODdk"
+    ]
   },
 ];

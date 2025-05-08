@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ConatctLinks from "./pages/ContactLinks";
 import ContactWithPersons from "./pages/ContactWithPersons";
 import KonwYourSection from "./pages/KonwYourSection";
+import Conditions from "./pages/Conditions";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contactlinks" element={<ConatctLinks />} />
         <Route path="/contactWithPersons" element={<ContactWithPersons />} />
         <Route path="/knowYourSection" element={<KonwYourSection />} />
+        <Route path="/conditions" element={<Conditions />} />
       </Routes>
       <Footer />
     </>

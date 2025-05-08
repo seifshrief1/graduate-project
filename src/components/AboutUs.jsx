@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBook, FaUsers, FaUniversity, FaLightbulb } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
@@ -26,45 +26,6 @@ const AboutUs = () => {
         سوق العمل داخل مصر وخارجها، وترسيخ الانتماء والهوية الوطنية في نفوس
         الطلاب.
       </p>
-
-      {/* Additional Details */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-8 text-gray-800">
-        <div className="flex flex-col items-center p-4 bg-orange-100 rounded-lg shadow-md">
-          <FaUniversity size={50} className="text-orange-600 mb-3" />
-          <h2 className="text-xl font-semibold mb-2">التعليم الأكاديمي</h2>
-          <p className="text-sm">
-            نقدم مجموعة واسعة من البرامج الأكاديمية التي تلبي احتياجات السوق
-            وتساعد الطلاب على تحقيق أهدافهم المهنية.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center p-4 bg-orange-100 rounded-lg shadow-md">
-          <FaBook size={50} className="text-orange-600 mb-3" />
-          <h2 className="text-xl font-semibold mb-2">البحث العلمي</h2>
-          <p className="text-sm">
-            نؤمن بأهمية البحث العلمي في تطوير المعرفة، ونشجع طلابنا وأعضاء هيئة
-            التدريس على إجراء أبحاث مبتكرة.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center p-4 bg-orange-100 rounded-lg shadow-md">
-          <FaUsers size={50} className="text-orange-600 mb-3" />
-          <h2 className="text-xl font-semibold mb-2">الأنشطة الطلابية</h2>
-          <p className="text-sm">
-            نقدم مجموعة متنوعة من الأنشطة الطلابية التي تعزز المهارات الشخصية
-            والاجتماعية، وتوفر بيئة تعليمية متكاملة.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center p-4 bg-orange-100 rounded-lg shadow-md">
-          <FaLightbulb size={50} className="text-orange-600 mb-3" />
-          <h2 className="text-xl font-semibold mb-2">الابتكار والتطوير</h2>
-          <p className="text-sm">
-            نعمل باستمرار على تطوير برامجنا التعليمية واستخدام أحدث التقنيات
-            لتعزيز تجربة التعلم للطلاب.
-          </p>
-        </div>
-      </div>
 
       {/* Footer Section */}
       <p className="text-gray-600 mt-8 text-sm">
