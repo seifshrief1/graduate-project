@@ -10,7 +10,7 @@ const Conditions = () => {
         شروط القبول في الاقسام المختلفة
       </p>
       <img
-        src="../../public/Capture.PNG"
+        src="/Capture.PNG"
         className="flex justify-center items-center mx-auto"
       />
     </div>
