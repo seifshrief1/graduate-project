@@ -46,10 +46,14 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <span className="text-gray-700 font-semibold">روابط إضافية:</span>
             <div className="flex items-center gap-4 text-gray-600">
-              <FaLink size={26} />
-              <span className="text-gray-800 text-xl font-medium">
-                سيتم إضافتها لاحقًا
-              </span>
+              {/* <FaLink size={20} /> */}
+              <a
+                href="https://www.facebook.com/share/18uhcySfQq/"
+                target="_blank"
+                className="text-blue-600 underline text-sm"
+              >
+                https://www.facebook.com/share/18uhcySfQq/
+              </a>
             </div>
           </div>
         </div>
